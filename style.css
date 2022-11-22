@@ -41,20 +41,11 @@ header {
     z-index: 10;
 }
 
-/* Я ебал твою МАТЬ */
-
-/* h1 {
-    font-family: 'Yeseva One', cursive;
-    color: white;
-    text-transform: uppercase;
-    font-size: 40px;
-} */
-
 h1 {
     font-family: 'Yeseva One', cursive;
     color: white;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .splint {
