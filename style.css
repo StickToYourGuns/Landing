@@ -118,15 +118,6 @@ nav {
     white-space: nowrap;
 }
 
-
-/* .button_first_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 170px;
-} */
-
 .button_first_header {
     background: #E3B873;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
@@ -1186,6 +1177,12 @@ input[type=checkbox] {
     color: #E3B873;
     margin: 2.5em 0 1em 0;
     text-align: center;
+}
+
+.eighth_step_adress a {
+    color: #E3B873;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .buttons_feedback {
