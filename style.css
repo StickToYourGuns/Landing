@@ -57,9 +57,9 @@ h1 {
     color: #E3B873;
 }
 
-.underline {
+/* .underline {
     border-bottom: 1px solid #E3B873;
-}
+} */
 
 .header {
     display: flex;
@@ -276,19 +276,66 @@ nav {
 .second_step_specs_grid {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .specs_title {
     font-family: 'Yeseva One', cursive;
     font-size: 18px;
     text-transform: uppercase;
-    margin: 40px 0px 10px;
+    margin: 40px 0px 40px;
 }
 
-.specs_discription {
+.specs_discription1 {
+    opacity: 0;
     font-size: 13px;
+    position: absolute;
     color: white;
-    margin-top: 0;
+    margin-top: 80px;
+    transition: .5s;
+}
+
+.specs_discription1.active {
+    opacity: 1;
+}
+
+.specs_discription2 {
+    opacity: 0;
+    font-size: 13px;
+    position: absolute;
+    color: white;
+    margin-top: 80px;
+    transition: .5s;
+}
+
+.specs_discription2.active {
+    opacity: 1;
+}
+
+.specs_discription3 {
+    opacity: 0;
+    font-size: 13px;
+    position: absolute;
+    color: white;
+    margin-top: 80px;
+    transition: .5s;
+}
+
+.specs_discription3.active {
+    opacity: 1;
+}
+
+.specs_discription4 {
+    opacity: 0;
+    font-size: 13px;
+    position: absolute;
+    color: white;
+    margin-top: 80px;
+    transition: .5s;
+}
+
+.specs_discription4.active {
+    opacity: 1;
 }
 
 .second_step_content_right {
@@ -310,7 +357,12 @@ nav {
     font-size: 14px;
     text-transform: uppercase;
     padding-bottom: 6px;
-    transition: .2s;
+    transition: .5s;
+}
+
+.second_step_object_name.active {
+    color: #E3B873;
+    border-bottom: 1px solid #E3B873;
 }
 
 .second_step_object_name:hover {
@@ -320,15 +372,32 @@ nav {
     cursor: pointer;
 }
 
-.golden_text.second_step_object_name {
+/* .golden_text.second_step_object_name {
     color: #E3B873;
+} */
+
+.second_step_image_container {
+    display: block;
+    height: 430px;
+    width: 100%;
+    position: relative;
 }
 
+
 .second_step_image {
-    display: flex;
+    position: absolute;
+    object-fit: fill;
     width: 100%;
+    height: 100%;
     margin-bottom: 10px;
     box-shadow: 0px 20px 20px #00000080;
+    opacity: 0;
+    transition: 1s;
+}
+
+.second_step_image.active {
+    display: block;
+    opacity: 1;
 }
 
 .second_step_nav {
@@ -914,9 +983,9 @@ input[type=checkbox] {
     cursor: pointer;
 }
 
-.golden_text.second_step_object_name {
+/* .golden_text.second_step_object_name {
     color: #E3B873;
-}
+} */
 
 .sixth_step_content_right {
     display: flex;
