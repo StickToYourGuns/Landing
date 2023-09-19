@@ -372,10 +372,6 @@ nav {
     cursor: pointer;
 }
 
-/* .golden_text.second_step_object_name {
-    color: #E3B873;
-} */
-
 .second_step_image_container {
     display: block;
     height: 430px;
@@ -404,6 +400,11 @@ nav {
     padding-top: 5vh;
     display: flex;
     align-items: center;
+    gap: 1vw;
+}
+
+.second_step_nav_container {
+    display: flex;
     gap: 1vw;
 }
 

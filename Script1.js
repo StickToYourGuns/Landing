@@ -1,4 +1,34 @@
 let imageArray = Array.from(document.querySelectorAll(".second_step_image"));
+
+// Ищем количество фоток
+let addCircles = (imageArray.length - 1);
+
+function addingCircles(count) {
+    const parent1 = document.querySelector(".second_step_nav_container");
+    for (let i = 0; i < count; i++) {
+            let newCircle = document.createElement("div");
+            newCircle.classList.add("second_step_nav_item")
+            newCircle.classList.add("circle")
+            parent1.append(newCircle);
+            console.log(i)
+        }
+}
+
+addingCircles(addCircles);
+
+function addingTitles(count) {
+    const parent2 = document.querySelector(".second_step_objects");
+        for (let i = 1; i <= count; i++) {
+            let newTitle = document.createElement("p");
+            newTitle.classList.add("second_step_object_name")
+            parent2.append(newTitle);
+            newTitle.innerHTML = (imageArray[i].alt);
+            }
+}
+
+addingTitles(addCircles);
+ 
+
 let circles = Array.from(document.querySelectorAll(".circle"));
 let titles = Array.from(document.querySelectorAll(".second_step_object_name"));
 let texts1 = Array.from(document.querySelectorAll(".specs_discription1"));
