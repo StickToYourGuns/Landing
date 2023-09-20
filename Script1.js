@@ -1,56 +1,50 @@
 let imageArray = Array.from(document.querySelectorAll(".second_step_image"));
-
-// Ищем количество фоток
 let addCircles = (imageArray.length - 1);
+const arrowLeft = document.querySelector(".arrow");
+const arrowRight = document.querySelector(".arrow_mirror");
+let texts1 = Array.from(document.querySelectorAll(".specs_discription1"));
+let texts2 = Array.from(document.querySelectorAll(".specs_discription2"));
+let texts3 = Array.from(document.querySelectorAll(".specs_discription3"));
+let texts4 = Array.from(document.querySelectorAll(".specs_discription4"));
+
 
 function addingCircles(count) {
     const parent1 = document.querySelector(".second_step_nav_container");
-    for (let i = 0; i < count; i++) {
-            let newCircle = document.createElement("div");
-            newCircle.classList.add("second_step_nav_item")
-            newCircle.classList.add("circle")
-            parent1.append(newCircle);
-            console.log(i)
-        }
+    for (let i = 1; i <= count; i++) {
+        let newCircle = document.createElement("div");
+        newCircle.classList.add("second_step_nav_item");
+        newCircle.classList.add("circle");
+        newCircle.setAttribute("data-number", (i));
+        parent1.append(newCircle);
+        console.log(i)
+    }
 }
 
 addingCircles(addCircles);
 
 function addingTitles(count) {
     const parent2 = document.querySelector(".second_step_objects");
-        for (let i = 1; i <= count; i++) {
-            let newTitle = document.createElement("p");
-            newTitle.classList.add("second_step_object_name")
-            parent2.append(newTitle);
-            newTitle.innerHTML = (imageArray[i].alt);
-            }
+    for (let i = 1; i <= count; i++) {
+        let newTitle = document.createElement("p");
+        newTitle.classList.add("second_step_object_name");
+        newTitle.setAttribute("data-number", (i));
+        parent2.append(newTitle);
+        newTitle.innerHTML = (imageArray[i].alt);
+    }
 }
 
 addingTitles(addCircles);
- 
 
 let circles = Array.from(document.querySelectorAll(".circle"));
 let titles = Array.from(document.querySelectorAll(".second_step_object_name"));
-let texts1 = Array.from(document.querySelectorAll(".specs_discription1"));
-let texts2 = Array.from(document.querySelectorAll(".specs_discription2"));
-let texts3 = Array.from(document.querySelectorAll(".specs_discription3"));
-let texts4 = Array.from(document.querySelectorAll(".specs_discription4"));
-
-const arrowLeft = document.querySelector(".arrow");
-const arrowRight = document.querySelector(".arrow_mirror");
-
-
-arrowLeft.addEventListener("click", () => gigaScroll("left"));
-arrowRight.addEventListener("click", () => gigaScroll("right"));
-
 
 function gigaScroll(direction) {
-    function elements(element){
+    function handleArrowClick(element) {
         let activeElement;
         let nextElement;
         let prevElement;
 
-        element.forEach (function (value, index) {
+        element.forEach(function (value, index) {
             if (value.classList.contains("active")) {
                 activeElement = index;
                 console.log(activeElement)
@@ -71,172 +65,51 @@ function gigaScroll(direction) {
             element[prevElement].classList.add("active")
         }
     }
-    elements(imageArray);
-    elements(circles);
-    elements(titles);
-    elements(texts1);
-    elements(texts2);
-    elements(texts3);
-    elements(texts4);
+    handleArrowClick(imageArray);
+    handleArrowClick(circles);
+    handleArrowClick(titles);
+    handleArrowClick(texts1);
+    handleArrowClick(texts2);
+    handleArrowClick(texts3);
+    handleArrowClick(texts4);
 }
 
-// function scroll(direction) {
-//     let activeElement;
-//     let nextElement;
-//     let prevElement;
+function toggleClasses(element, event) {
+    element.forEach(function (item) {
+        item.classList.remove("active");
+    })
+    element[event.currentTarget.dataset.number].classList.add("active");
+}
 
-// // ПИКЧИ
+function selectByElement(event) {
+    toggleClasses(imageArray, event);
+    toggleClasses(circles, event);
+    toggleClasses(titles, event);
+}
 
-//     imageArray.forEach (function (value, index) {
-//         if (value.classList.contains("active")) {
-//             activeElement = index;
-//             console.log(activeElement)
-//             value.classList.remove("active");
-//         }
-//     });
-//     if (direction == "right") {
-//         nextElement = activeElement + 1;
-//         if (nextElement == imageArray.length) {
-//             nextElement = 0;
-//         }
-//         imageArray[nextElement].classList.add("active")
-//     } else {
-//         prevElement = activeElement - 1;
-//         if (prevElement == -1) {
-//             prevElement = (imageArray.length - 1);
-//         }
-//         imageArray[prevElement].classList.add("active")
-//     }
 
-//     // КРУГИ
+arrowLeft.addEventListener("click", () => gigaScroll("left"));
+arrowRight.addEventListener("click", () => gigaScroll("right"));
 
-//     circles.forEach (function (value, index) {
-//         if (value.classList.contains("active")) {
-//             activeElement = index;
-//             console.log(activeElement)
-//             value.classList.remove("active");
-//         }
-//     });
-//     if (direction == "right") {
-//         nextElement = activeElement + 1;
-//         if (nextElement == circles.length) {
-//             nextElement = 0;
-//         }
-//         circles[nextElement].classList.add("active")
-//     } else {
-//         prevElement2 = activeElement - 1;
-//         if (prevElement == -1) {
-//             prevElement = (circles.length - 1);
-//         }
-//         circles[prevElement].classList.add("active")
-//     }
+circles.forEach(function (circle) {
+    circle.addEventListener("click", (e) => selectByElement(e));
+});
 
-//     // ТАЙТЛЫ
+titles.forEach(function (title) {
+    title.addEventListener("click", (e) => selectByElement(e));
+});
 
-//     titles.forEach (function (value, index) {
-//         if (value.classList.contains("active")) {
-//             activeElement = index;
-//             console.log(activeElement)
-//             value.classList.remove("active");
-//         }
-//     });
-//     if (direction == "right") {
-//         nextElement = activeElement + 1;
-//         if (nextElement == titles.length) {
-//             nextElement = 0;
-//         }
-//         titles[nextElement].classList.add("active")
-//     } else {
-//         prevElement2 = activeElement - 1;
-//         if (prevElement == -1) {
-//             prevElement = (titles.length - 1);
-//         }
-//         titles[prevElement].classList.add("active")
-//     }
 
-//     // ТЕКСТЫ бля ну и хуета
+// Шаг 1. Окончание слайдера
+// Переназвать переменные (я вроде понял что имеет в виду Соня)
+// Переписать addingCircles и addingTitles и вынести по максимум повторяющиеся строки в одну функцию
+// Вынести handleArrowClick как в тоглклассес, не забыть при этом параметры
 
-//     texts1.forEach (function (value, index) {
-//         if (value.classList.contains("active")) {
-//             activeElement = index;
-//             console.log(activeElement)
-//             value.classList.remove("active");
-//         }
-//     });
-//     if (direction == "right") {
-//         nextElement = activeElement + 1;
-//         if (nextElement == texts1.length) {
-//             nextElement = 0;
-//         }
-//         texts1[nextElement].classList.add("active")
-//     } else {
-//         prevElement2 = activeElement - 1;
-//         if (prevElement == -1) {
-//             prevElement = (texts1.length - 1);
-//         }
-//         texts1[prevElement].classList.add("active")
-//     }
+// Шаг 2. 
+// Подсветка якорей
 
-//     texts2.forEach (function (value, index) {
-//         if (value.classList.contains("active")) {
-//             activeElement = index;
-//             console.log(activeElement)
-//             value.classList.remove("active");
-//         }
-//     });
-//     if (direction == "right") {
-//         nextElement = activeElement + 1;
-//         if (nextElement == texts2.length) {
-//             nextElement = 0;
-//         }
-//         texts2[nextElement].classList.add("active")
-//     } else {
-//         prevElement2 = activeElement - 1;
-//         if (prevElement == -1) {
-//             prevElement = (texts2.length - 1);
-//         }
-//         texts2[prevElement].classList.add("active")
-//     }
+// Шаг 3.
+// Попы
 
-//     texts3.forEach (function (value, index) {
-//         if (value.classList.contains("active")) {
-//             activeElement = index;
-//             console.log(activeElement)
-//             value.classList.remove("active");
-//         }
-//     });
-//     if (direction == "right") {
-//         nextElement = activeElement + 1;
-//         if (nextElement == texts3.length) {
-//             nextElement = 0;
-//         }
-//         texts3[nextElement].classList.add("active")
-//     } else {
-//         prevElement2 = activeElement - 1;
-//         if (prevElement == -1) {
-//             prevElement = (texts3.length - 1);
-//         }
-//         texts3[prevElement].classList.add("active")
-//     }
-
-//     texts4.forEach (function (value, index) {
-//         if (value.classList.contains("active")) {
-//             activeElement = index;
-//             console.log(activeElement)
-//             value.classList.remove("active");
-//         }
-//     });
-//     if (direction == "right") {
-//         nextElement = activeElement + 1;
-//         if (nextElement == texts4.length) {
-//             nextElement = 0;
-//         }
-//         texts4[nextElement].classList.add("active")
-//     } else {
-//         prevElement2 = activeElement - 1;
-//         if (prevElement == -1) {
-//             prevElement = (texts4.length - 1);
-//         }
-//         texts4[prevElement].classList.add("active")
-//     }
-// }
+// Шаг 4.
+// Видос
