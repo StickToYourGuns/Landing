@@ -357,7 +357,7 @@ nav {
     font-size: 14px;
     text-transform: uppercase;
     padding-bottom: 6px;
-    transition: .5s;
+    transition: 1s;
 }
 
 .second_step_object_name.active {
@@ -368,7 +368,6 @@ nav {
 .second_step_object_name:hover {
     color: #E3B873;
     font-size: 14px;
-    text-transform: uppercase;
     cursor: pointer;
 }
 
