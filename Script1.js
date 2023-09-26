@@ -12,10 +12,9 @@ function creatingElements(count) {
     const circleParent = document.querySelector(".second_step_nav_container");
     const titleParent = document.querySelector(".second_step_objects");
     for (let i = 1; i <= count; i++) {
-        let newCircle = document.createElement("div");
-        let newTitle = document.createElement("p");
-        newCircle.classList.add("second_step_nav_item");
-        newCircle.classList.add("circle");
+        const newCircle = document.createElement("div");
+        const newTitle = document.createElement("p");
+        newCircle.classList.add("second_step_nav_item", "circle");
         newTitle.classList.add("second_step_object_name");
         newCircle.setAttribute("data-number", (i));
         newTitle.setAttribute("data-number", (i));
@@ -105,4 +104,4 @@ titlesArray.forEach(function (title) {
 // Попы
 
 // Шаг 4.
-// Видос
+// +/- Видос
