@@ -31,6 +31,7 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
+    position: relative;
 }
 
 header {
@@ -819,6 +820,7 @@ input[type=checkbox] {
     border-bottom: 1px solid #ffffff15;
     padding-bottom: 5px;
     background-color: #ffffff00;
+    color: white;
 }
 
 .input_data_fifth_step::placeholder {
@@ -1311,6 +1313,66 @@ input[type=checkbox] {
     width: 87%;
     margin: auto;
     font-size: 11px;
+}
+
+
+/* ПОП */
+
+.pop_container {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background-color: rgba(19, 19, 19, 0.95);
+    transition: .5s;
+}
+
+.pop_container.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pop_container_content {
+    position: sticky;
+    z-index: 2;
+    height: 500px;
+    width: 50%;
+    top: 25vh;
+    display: flex;
+}
+
+.pop_container_content_left {
+    width: 40%;
+}
+
+.pop_container_content_right {
+    position: relative;
+    width: 60%;
+}
+
+.pop_close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.pop_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pop_close {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.pop_close:hover path {
+    fill: #fff;
 }
 
 @media screen and (max-width: 768px) {
