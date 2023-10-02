@@ -49,10 +49,3 @@ window.addEventListener('scroll', function () {
     comparePositions (scrollPosition);
     return (scrollPosition);
 });
-
-
-
-// план:
-
-// 1.Переписать компейр
-// 2.Заказать пепперони
