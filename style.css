@@ -102,10 +102,11 @@ nav {
 
 .menu_item a.active {
     color: #E3B873;
+    transition: 1s;
 }
 
 .menu_item a:hover {
-    color: #E3B873;
+    color: #a7844b;
     transform: scale(1.1);
 }
 
