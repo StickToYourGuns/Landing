@@ -90,18 +90,3 @@ circlesArray.forEach(function (circle) {
 titlesArray.forEach(function (title) {
     title.addEventListener("click", (event) => selectByElement(event));
 });
-
-
-// Шаг 1. Окончание слайдера
-// + Переназвать переменные (я вроде понял что имеет в виду Соня)
-// + Переписать addingcirclesArray и addingtitlesArray и вынести по максимум повторяющиеся строки в одну функцию
-// + Вынести handleArrowClick как в тоглклассес, не забыть при этом параметры
-
-// Шаг 2.
-// + Подсветка якорей
-
-// Шаг 3.
-// Попы
-
-// Шаг 4.
-// +/- Видос

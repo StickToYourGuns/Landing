@@ -1,7 +1,3 @@
-/* * {
-    border: 1px solid blue;
-} */
-
 ::-webkit-scrollbar {
     width: 7px;
     background-color: #131313;
@@ -801,6 +797,23 @@ input[type=checkbox] {
     justify-content: space-between;
     width: 80%;
     height: 80%;
+}
+
+.form_error {
+    color: #E3B873;
+    text-align: left;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+    display: none;
+  }
+
+input:invalid:not(:placeholder-shown) + .form_error {
+    display: block;
+  }
+
+.input_data_fifth_step:invalid {
+    color: #E3B873;
 }
 
 .input_part_fifth_step {

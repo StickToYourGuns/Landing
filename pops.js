@@ -27,6 +27,3 @@ document.addEventListener( "keydown", function(e) {
         popUp.classList.remove("active");
     }
 })
-
-// Закрытие по клику вне попапа
-// Закрытие при эскейпе

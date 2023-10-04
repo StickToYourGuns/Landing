@@ -488,40 +488,41 @@
 
                 <svg class="pop_close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <g id="close">
-                        <path fill="#aaa" id="x" d="M18.717 6.697l-1.414-1.414-5.303 5.303-5.303-5.303-1.414 1.414 5.303 5.303-5.303 5.303 1.414 1.414 5.303-5.303 5.303 5.303 1.414-1.414-5.303-5.303z"/>
+                        <path fill="#ffffff30" id="x" d="M18.717 6.697l-1.414-1.414-5.303 5.303-5.303-5.303-1.414 1.414 5.303 5.303-5.303 5.303 1.414 1.414 5.303-5.303 5.303 5.303 1.414-1.414-5.303-5.303z"/>
                     </g>
                 </svg>
 
-                <div class="fifth_step_form">
-                    <p class="fifth_step_p">Leave a request for free<br> departure of the measurer</p>
-                    <div class="fifth_step_form_container">
+                <form class="fifth_step_form">
+                    <p class="fifth_step_p">Leave your phone number<br> we'll call you back soon </p>
+                    <div action="#" class="fifth_step_form_container">
                         <div class="input_part_fifth_step">
                             <span class="input_fill_fifth_step">Name</span>
-                            <input class="input_data_fifth_step" type="text" placeholder="What is your name?">
+                            <input class="input_data_fifth_step" type="text" name ="name" placeholder="What is your name?" required />
                         </div>
                         <div class="input_part_fifth_step">
                             <span class="input_fill_fifth_step">Phone</span>
-                            <input class="input_data_fifth_step" type="text" placeholder="Your phone number:">
+                            <input class="input_data_fifth_step" type="phone" name ="phone" placeholder="Your phone number:" "[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="12" maxlength="12" required />
+                            <span class="form_error">Это поле должно содержать номер телефона в формате +71234567890</span>
                         </div>
                         <div class="input_part_fifth_step">
-                            <span class="input_fill_fifth_step">Email</span>
-                            <input class="input_data_fifth_step" type="text" placeholder="Your email:">
+                            <span class="input_fill_fifth_step">Message (optional)</span>
+                            <input class="input_data_fifth_step" type="text" name = "message" placeholder="Describe your questions:" />
                         </div>
-
                         <label class="main_fifth_step">I agree to the processing of personal data
                             <input type="checkbox" checked="checked">
                             <span class="geekmark"></span>
                         </label>
                     </div>
                     <div class="fifth_step_button_container">
-                        <button class="button_fifth">REQUEST A CALL</button>
+                        <button type="submit" class="button_fifth">REQUEST A CALL</button>
                     </div>
-                </div>
+                </form>
+
             </div>
         </div>
     </div>
 
-    <script src="./script1.js"></script>
+    <script src="./gallery.js"></script>
     <script src="./scrolling.js"></script>
     <script src="./pops.js"></script>
 </body>
