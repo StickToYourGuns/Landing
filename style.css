@@ -482,14 +482,74 @@ nav {
     margin: 0 0 -10px 0;
 }
 
+.video {
+    filter: brightness(100%);
+    transition: .5s;
+}
+
+.video.pause {
+    filter: brightness(30%);
+    transition: .5s;
+}
+
+
+.third_step_video.pause {
+    filter: "brightness: 30%"
+}
+
 .third_step_video {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 70%;
+    position: relative;
+    box-shadow: 5px 5px 10px #00000050;
 }
 
-.third_step_video::before {
+.video_button.onmouse {
+    scale: 1.1;
+   
+}
+
+.video_button.pause {
+    opacity: 1;
+}
+
+/* .video_button g circle{
+    fill: #ee9608;
+} */
+
+.video_button{
+    position: absolute;
+    z-index: 1;
+    width: 20vh;
+    height: 20vh;
+    cursor: pointer;
+    background-color: #fff0;
+    border: 0;
+    transition: .5s;
+    opacity: 0;
+}
+
+/* .video_button{
+    background-image: url(./images/button_third.svg);
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    width: 20vh;
+    height: 20vh;
+    cursor: pointer;
+    background-color: #fff0;
+    border: 0;
+    transition: .5s;
+    opacity: 0;
+} */
+
+/* .video_button:hover {
+    scale: 1.05;
+} */
+
+/* .third_step_video::before {
     content: "";
     background-image: url(./images/button_third.svg);
     background-size: cover;
@@ -498,12 +558,9 @@ nav {
     width: 15vh;
     height: 15vh;
     cursor: pointer;
-}
+} */
 
-.video {
-    filter: brightness(30%);
-    width: 100%;
-}
+
 
 .long_dash {
     width: 55px;
@@ -1175,7 +1232,7 @@ input[type=checkbox] {
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 11;
+    z-index: 2;
 }
 
 .eighth_step_content {
@@ -1185,7 +1242,7 @@ input[type=checkbox] {
     align-items: center;
     width: 60%;
     margin-top: -10em;
-    z-index: 12;
+    z-index: 2;
 }
 
 .eighth_step_form {
@@ -1342,6 +1399,7 @@ input[type=checkbox] {
     justify-content: center;
     background-color: rgba(19, 19, 19, 0.95);
     transition: .5s;
+    z-index: 2;
 }
 
 .pop_container.active {
@@ -1351,7 +1409,7 @@ input[type=checkbox] {
 
 .pop_container_content {
     position: sticky;
-    z-index: 2;
+    z-index: 3;
     height: 500px;
     width: 50%;
     top: 25vh;
@@ -1371,17 +1429,14 @@ input[type=checkbox] {
     position: absolute;
     right: 10px;
     top: 5px;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .pop_image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.pop_close {
-    padding: 5px;
-    cursor: pointer;
 }
 
 .pop_close:hover path {
@@ -1753,7 +1808,7 @@ input[type=checkbox] {
     .eighth_step_content {
         margin-top: auto;
         width: 95%;
-        z-index: auto;
+        z-index: 3;
     }
 
     .eighth_step_form {

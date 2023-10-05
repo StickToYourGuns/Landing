@@ -130,46 +130,67 @@
             <h2 class="third_step_title">Online control</h2>
             <img class="chapter_img" src="./images/camera.svg" alt="camera">
             <div class="third_step_video">
-                <!-- <img class="video" src="./images/video.jpg" alt="video"> -->
-                <iframe width="840" height="470" src="https://www.youtube.com/embed/YB_RRhM3zjU?si=Z483m2g1Nb4qBnge" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <video class="video pause" src="./videos/Video.MP4" width="100%" height="auto"></video>
+                <!-- <input class="video_button pause" type="button"> -->
+
+                <svg class="video_button pause" xmlns="http://www.w3.org/2000/svg" width="145" height="145" viewBox="0 0 145 145" fill="none">
+                    <g filter="url(#filter0_d_1_11184)">
+                    <circle cx="72.5" cy="67.5" r="42.5" fill="#E3B873"/>
+                    </g>
+                    <path d="M86 68L65 80.1244L65 55.8756L86 68Z" fill="white"/>
+                    <defs>
+                    <filter id="filter0_d_1_11184" x="0" y="0" width="145" height="145" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="5"/>
+                    <feGaussianBlur stdDeviation="15"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.890196 0 0 0 0 0.721569 0 0 0 0 0.45098 0 0 0 0.2 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_11184"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_11184" result="shape"/>
+                    </filter>
+                    </defs>
+                </svg>
+
             </div>
             <hr class="long_dash">
             <p class="third_step_p">At each facility, a camera is installed that broadcasts the progress of work on the
                 clock. At any time, you can go to our website and monitor the progress of work in your apartment. You
                 can watch the live broadcast from one of our facilities!<br>Leave a request below and you will receive a
                 link to the broadcast.</p>
-            <div class="third_step_form">
+
+            <form class="third_step_form">
                 <div class="input_part_third_step">
                     <span class="input_fill_third_step">Name</span>
-                    <input class="input_data_third_step" type="text" placeholder="What is your name?">
+                    <input class="input_data_third_step" type="text" placeholder="What is your name?" required>
                 </div>
                 <div class="input_part_third_step">
                     <span class="input_fill_third_step">Phone</span>
-                    <input class="input_data_third_step" type="text" placeholder="Your phone number">
+                    <input class="input_data_third_step" type="phone" placeholder="Your phone number" minlength="12" maxlength="12" required>
                 </div>
                 <button class="button_third">SUBMIT</button>
-            </div>
+            </form>
+
             <label class="main">I agree to the processing of personal data
                 <input type="checkbox" checked="checked">
                 <span class="geekmark"></span>
             </label>
 
 
-            <div class="third_step_form_mobile">
+            <form class="third_step_form_mobile">
                 <div class="input_part_third_step_mobile">
                     <span class="input_fill_third_step_mobile">Name</span>
-                    <input class="input_data_third_step_mobile" type="text" placeholder="What is your name?">
+                    <input class="input_data_third_step_mobile" type="text" placeholder="What is your name?" required>
                 </div>
                 <div class="input_part_third_step_mobile">
                     <span class="input_fill_third_step_mobile">Phone</span>
-                    <input class="input_data_third_step_mobile" type="text" placeholder="Your phone number">
+                    <input class="input_data_third_step_mobile" type="phone" placeholder="Your phone number" minlength="12" maxlength="12" required>
                 </div>
                 <label class="main_mobile">I agree to the processing of personal data
                     <input type="checkbox" checked="checked">
                     <span class="geekmark"></span>
                 </label>
                 <button class="button_third">SUBMIT</button>
-            </div>
+            </form>
 
 
 
@@ -257,20 +278,20 @@
                 </ul>
             </div>
             <div class="fifth_step_content_right">
-                <div class="fifth_step_form">
+                <form class="fifth_step_form">
                     <p class="fifth_step_p">Leave a request for free<br> departure of the measurer</p>
                     <div class="fifth_step_form_container">
                         <div class="input_part_fifth_step">
                             <span class="input_fill_fifth_step">Name</span>
-                            <input class="input_data_fifth_step" type="text" placeholder="What is your name?">
+                            <input class="input_data_fifth_step" type="text" placeholder="What is your name?" required>
                         </div>
                         <div class="input_part_fifth_step">
                             <span class="input_fill_fifth_step">Phone</span>
-                            <input class="input_data_fifth_step" type="text" placeholder="Your phone number:">
+                            <input class="input_data_fifth_step" type="phone" placeholder="Your phone number:" minlength="12" maxlength="12" required>
                         </div>
                         <div class="input_part_fifth_step">
                             <span class="input_fill_fifth_step">Email</span>
-                            <input class="input_data_fifth_step" type="text" placeholder="Your email:">
+                            <input class="input_data_fifth_step" type="e-mail" placeholder="Your email:" required>
                         </div>
 
                         <label class="main_fifth_step">I agree to the processing of personal data
@@ -281,7 +302,7 @@
                     <div class="fifth_step_button_container">
                         <button class="button_fifth">CALL THE MEASURER</button>
                     </div>
-                </div>
+                </form>
                 <div class="fifth_step_pig"><img class="fifth_step_pig_img" src="./images/pig.svg" alt="pig">
                     <p>Help save 10 - 20% of the<br> cost of materials</p>
                 </div>
@@ -411,16 +432,16 @@
 
     <section class="eighth_step">
         <div class="eighth_step_content">
-            <div class="eighth_step_form">
+            <form class="eighth_step_form">
                 <h2 class="eighth_step_h2">Have any questions?</h2>
                 <div class="eighth_step_form_container_one">
                     <div class="input_part_eighth_step">
                         <span class="input_fill_eighth_step">Name</span>
-                        <input class="input_data_eighth_step" type="text" placeholder="What is your name?">
+                        <input class="input_data_eighth_step" type="text" placeholder="What is your name?" required>
                     </div>
                     <div class="input_part_eighth_step">
                         <span class="input_fill_eighth_step">Phone</span>
-                        <input class="input_data_eighth_step" type="text" placeholder="Your phone number:">
+                        <input class="input_data_eighth_step" type="phone" placeholder="Your phone number:" minlength="12" maxlength="12" required>
                     </div>
                 </div>
                 <div class="eighth_step_form_container_two">
@@ -437,7 +458,7 @@
                 <div class="eighth_step_button_container">
                     <button class="button_eighth">SUBMIT</button>
                 </div>
-            </div>
+            </form>
 
             <div class="eighth_step_map_mobile">
                 <script type="text/javascript" charset="utf-8" async
@@ -494,19 +515,19 @@
 
                 <form class="fifth_step_form">
                     <p class="fifth_step_p">Leave your phone number<br> we'll call you back soon </p>
-                    <div action="#" class="fifth_step_form_container">
+                    <div class="fifth_step_form_container">
                         <div class="input_part_fifth_step">
                             <span class="input_fill_fifth_step">Name</span>
-                            <input class="input_data_fifth_step" type="text" name ="name" placeholder="What is your name?" required />
+                            <input class="input_data_fifth_step" type="text" name ="name" placeholder="What is your name?" required>
                         </div>
                         <div class="input_part_fifth_step">
                             <span class="input_fill_fifth_step">Phone</span>
-                            <input class="input_data_fifth_step" type="phone" name ="phone" placeholder="Your phone number:" "[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="12" maxlength="12" required />
+                            <input class="input_data_fifth_step" type="phone" name ="phone" placeholder="Your phone number:" minlength="12" maxlength="12" required>
                             <span class="form_error">Это поле должно содержать номер телефона в формате +71234567890</span>
                         </div>
                         <div class="input_part_fifth_step">
                             <span class="input_fill_fifth_step">Message (optional)</span>
-                            <input class="input_data_fifth_step" type="text" name = "message" placeholder="Describe your questions:" />
+                            <input class="input_data_fifth_step" type="text" name = "message" placeholder="Describe your questions:">
                         </div>
                         <label class="main_fifth_step">I agree to the processing of personal data
                             <input type="checkbox" checked="checked">
@@ -525,6 +546,7 @@
     <script src="./gallery.js"></script>
     <script src="./scrolling.js"></script>
     <script src="./pops.js"></script>
+    <script src="./video.js"></script>
 </body>
 
 </html>
