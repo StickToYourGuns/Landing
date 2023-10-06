@@ -125,19 +125,20 @@
             </div>
         </div>
     </section>
+    <div class="blackscreen hidden"></div>
     <section class="third_step" id="online_control">
         <div class="third_step_content">
             <h2 class="third_step_title">Online control</h2>
             <img class="chapter_img" src="./images/camera.svg" alt="camera">
             <div class="third_step_video">
-                <video class="video pause" src="./videos/Video.MP4" width="100%" height="auto"></video>
+                <video class="video pause" src="./videos/Video.MP4" width="100%" height="auto" loop="1"></video>
                 <!-- <input class="video_button pause" type="button"> -->
 
-                <svg class="video_button pause" xmlns="http://www.w3.org/2000/svg" width="145" height="145" viewBox="0 0 145 145" fill="none">
+                <svg class="video_button_play pause" xmlns="http://www.w3.org/2000/svg" width="145" height="145" viewBox="0 0 145 145" fill="none">
                     <g filter="url(#filter0_d_1_11184)">
-                    <circle cx="72.5" cy="67.5" r="42.5" fill="#E3B873"/>
+                    <circle cx="72.5" cy="67.5" r="20" fill="#E3B873"/>
                     </g>
-                    <path d="M86 68L65 80.1244L65 55.8756L86 68Z" fill="white"/>
+                    <path d="M 81 67 L 66.4 75 L 66.4 59.5 L 81 67 Z" fill="white"/>
                     <defs>
                     <filter id="filter0_d_1_11184" x="0" y="0" width="145" height="145" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                     <feFlood flood-opacity="0" result="BackgroundImageFix"/>
@@ -150,6 +151,27 @@
                     </filter>
                     </defs>
                 </svg>
+
+
+                <svg class="video_button_pause" xmlns="http://www.w3.org/2000/svg" width="145" height="145" viewBox="0 0 145 145" fill="none">
+                    <g filter="url(#filter0_d_1_11184)">
+                    <circle cx="72.5" cy="67.5" r="20" fill="#E3B873"/>
+                    </g>
+                    <rect x="66" y="60" width="4" height="15" style="paint-order: stroke; stroke-width: 0px; fill: rgb(255, 255, 255); stroke: rgb(255, 255, 255);" transform="matrix(1, 0, 0, 1, 1.7763568394002505e-15, 0)"></rect>
+                    <rect x="76" y="60" width="4" height="15" style="paint-order: stroke; stroke-width: 0px; fill: rgb(255, 255, 255); stroke: rgb(255, 255, 255);" transform="matrix(1, 0, 0, 1, 1.7763568394002505e-15, 0)"></rect>
+                    <defs>
+                    <filter id="filter0_d_1_11184" x="0" y="0" width="145" height="145" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="5"/>
+                    <feGaussianBlur stdDeviation="15"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.890196 0 0 0 0 0.721569 0 0 0 0 0.45098 0 0 0 0.2 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_11184"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_11184" result="shape"/>
+                    </filter>
+                    </defs>
+                </svg>
+
 
             </div>
             <hr class="long_dash">
