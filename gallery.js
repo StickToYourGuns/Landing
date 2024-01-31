@@ -1,7 +1,10 @@
 const imageArray = Array.from(document.querySelectorAll(".second_step_image"));
+const imageArrayMobile = Array.from(document.querySelectorAll(".second_step_mobile_image"));
 const needToAdd = (imageArray.length - 1);
 const arrowLeft = document.querySelector(".arrow");
 const arrowRight = document.querySelector(".arrow_mirror");
+const arrowLeftMobile = document.querySelector(".second_step_mobile_arrow_left");
+const arrowRightMobile = document.querySelector(".second_step_mobile_arrow_right");
 const texts1 = Array.from(document.querySelectorAll(".specs_discription1"));
 const texts2 = Array.from(document.querySelectorAll(".specs_discription2"));
 const texts3 = Array.from(document.querySelectorAll(".specs_discription3"));
@@ -58,6 +61,7 @@ function scrollClassesSelect(array, direction) {
 
 function scrollByElement(direction) {
     scrollClassesSelect(imageArray, direction);
+    scrollClassesSelect(imageArrayMobile, direction);
     scrollClassesSelect(circlesArray, direction);
     scrollClassesSelect(titlesArray, direction);
     scrollClassesSelect(texts1, direction);
@@ -90,3 +94,6 @@ circlesArray.forEach(function (circle) {
 titlesArray.forEach(function (title) {
     title.addEventListener("click", (event) => selectByElement(event));
 });
+
+arrowLeftMobile.addEventListener("click", () => scrollByElement("left"));
+arrowRightMobile.addEventListener("click", () => scrollByElement("right"));
